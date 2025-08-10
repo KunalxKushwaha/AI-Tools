@@ -11,7 +11,7 @@ const App = () => {
         <Route path = "/ai" element = {<Layout />}>
         <Route index element = {< DashBoard/>}/>
         <Route path = 'write-article' element = {< WriteArticle/>}/>
-        <Route path = 'blog-title' element = {< BlogTitles/>}/>
+        <Route path = 'blog-titles' element = {< Blogtitles/>}/>
 
 
         </Route>
