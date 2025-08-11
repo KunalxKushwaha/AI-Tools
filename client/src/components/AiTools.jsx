@@ -14,7 +14,7 @@ const AiTools = () => {
         <p className='text-gray-500 max-w-lg mx-auto'>Everything you need to create, enhance, and optimize your content with cutting-edge AI Technology.</p>
       </div>
 
-      <div className='flex-flex-wrap mt-10 justify-center'>
+      <div className='flex flex-wrap mt-10 justify-center'>
         {AiToolsData.map((tool,index) => (
             <div key={index} className='bg-[#FDFDFE] rounded-lg p-8 m-4 max-w-xs shadow-lg border border-gray-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer' onClick={() => user && navigate(tool.path)}>
                 <tool.Icon className='w-12 h-12 p-3 text-white rounded-xl' style={{background: `linear-gradient(to bottom, ${tool.bg.from}, ${tool.bg.to})`}}/>
