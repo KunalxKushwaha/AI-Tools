@@ -26,7 +26,7 @@ const onSubmitHandler = async(e)=> {
           <h1 className='text-xl font-semibold'>Article Configuration</h1>
         </div>
         <p className='mt-6 text-sm font-medium'>Article Topic</p>
-        <input onChange={(e)=> setInput(e.target.value)} type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300 hover:border-[#65ADFF] shadow' placeholder='The Future of Artificial Intelligence is...' required />
+        <input onChange={(e)=> setInput(e.target.value)} value={input} type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300 hover:border-[#65ADFF] shadow' placeholder='The Future of Artificial Intelligence is...' required />
         <p className='mt-4 text-sm font-medium'>Article Lenght</p>
 
         <div className='mt-3 flex gap-3 flex-wrap sm:max-w-9/11'>
