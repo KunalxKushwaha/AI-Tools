@@ -33,7 +33,7 @@ const Blogtitles = () => {
               <span 
               onClick={()=> setSelectedCategory(item)}
                key={item} 
-              className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedCategory === item ? 'bg-orange-50 text-orange-700' : 'text-gray-500 border-gray-300'}`}>
+              className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedCategory === item ? 'bg-purple-50 text-purple-700' : 'text-gray-500 border-gray-300'}`}>
                 {item}
                 </span>
             ))
@@ -52,14 +52,14 @@ const Blogtitles = () => {
       <div className='w-full max-w-lg p-4 bg-white rounded-lg flex flex-col border border-gray-200 min-h-96 max-h-[600px]'>
 
         <div className='flex items-center gap-3'>
-          <Edit className='w-5 h-5 text-[#8E37EB]'/>
+          <Hash className='w-5 h-5 text-[#8E37EB]'/>
           <h1 className='text-xl font-semibold'>Generated Titles</h1>
 
         </div>
         <div className='flex-1 flex justify-center items-center'>
           <div className='text-sm flex flex-col items-center gap-5 text-gray-400'>
-            <Edit className='w-9 h-9'/>
-            <p className='justify-center item-center flex'>Enter your Topic and Click "Generate Article" to get Started </p>
+            <Hash className='w-9 h-9'/>
+            <p className='justify-center item-center flex'>Enter Your Topic and Click "Generate Title" to get Started </p>
           </div>
 
         </div>
