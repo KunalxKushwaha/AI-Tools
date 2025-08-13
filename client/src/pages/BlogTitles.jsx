@@ -1,4 +1,4 @@
-import { Sparkles } from 'lucide-react'
+import { Hash, Sparkles } from 'lucide-react'
 import React from 'react'
 import {useState} from 'react'
 
@@ -25,25 +25,25 @@ const Blogtitles = () => {
         </div>
         <p className='mt-6 text-sm font-medium'>Keyword</p>
         <input onChange={(e)=> setInput(e.target.value)} value={input}type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300 hover:border-[#65ADFF] shadow' placeholder='The Future of Artificial Intelligence is...' required />
-        <p className='mt-4 text-sm font-medium'>Article Lenght</p>
+        <p className='mt-4 text-sm font-medium'>Category</p>
 
         <div className='mt-3 flex gap-3 flex-wrap sm:max-w-9/11'>
           {
-            blogCategories.map((item,index)=> (
+            blogCategories.map((item)=> (
               <span 
               onClick={()=> setSelectedCategory(item)}
-               key={index} 
-              className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedCategory.text === item.text ? 'bg-blue-50 text-blue-700' : 'text-gray-500 border-gray-300'}`}>
-                {item.text}
+               key={item} 
+              className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedCategory === item ? 'bg-orange-50 text-orange-700' : 'text-gray-500 border-gray-300'}`}>
+                {item}
                 </span>
             ))
           }
         </div>
         <br/>
 
-        <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>
-          <Edit className='w-5'/>
-          Generate Article
+        <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#C341F6] to-[#8E37EB] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>
+          <Hash className='w-5'/>
+          Generate Title
         </button>
 
         
