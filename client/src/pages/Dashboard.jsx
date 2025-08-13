@@ -21,7 +21,7 @@ const Dashboard = () => {
       <div className='flex justify-start gap-4 flex-wrap'>
         {/*Total Creations Card */}
           <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounded-xl border-gray-200'>
-            <div className='text-slate-600 '>
+            <div className='text-slate-600 cursor-pointer'>
               <p className='text-sm'>Total Creations</p>
               <h2 className='text-xl font-semibold'>{creations.length}</h2>
             </div>
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
           {/*Active Plan Cards*/ }
           <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounded-xl border-gray-200'>
-            <div className='text-slate-600 '>
+            <div className='text-slate-600 cursor-pointer'>
               <p className='text-sm'>Active Plan</p>
               <h2 className='text-xl font-semibold'> <Protect plan='premium' fallback =' free'>Premium</Protect> </h2>
             </div>
