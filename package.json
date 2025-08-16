@@ -4,6 +4,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "server": "^0.0.3",
     "tailwindcss": "^4.1.11"
   }
 }
