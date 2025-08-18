@@ -19,7 +19,7 @@ app.get('/', (req,res)=> res.send('Server Is Live NOW! Finally done'))
 app.use(requireAuth())
 
 app.use('/api/ai', aiRouter)
-app.use('/api/user', userRouter)
+app.use('/api/ai', userRouter)
 
 const PORT = process.env.PORT || 2000;
 
