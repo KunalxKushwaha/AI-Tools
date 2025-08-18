@@ -1,12 +1,45 @@
 import { Eraser, FileText, Sparkles } from 'lucide-react'
 import React from 'react'
 import {useState} from 'react'
+import toast from 'react-hot-toast'
+import Markdown from 'react-markdown'
+import axios from 'axios'
+import { useAuth } from '@clerk/clerk-react'
+
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 const ReviewResume = () => {
- const [setInput] = useState('')
+ const [input,setInput] = useState('')
+ const [loading, setLoading] = useState(false)
+const [content, setContent] = useState('')
+     
+     const {getToken} = useAuth()
 
    const onSubmitHandler = async(e)=> {
-     e.preventDefalut();
+     e.preventDefault();
+     try {
+       setLoading(true)
+       const formData = new FormData()
+       formData.append('resume', input)
+    
+
+       const {data} = await axios.post('/api/ai/resume-review', formData, {
+        headers: {
+          Authorization: `Bearer ${await getToken()}`
+        }
+      })
+
+      if(data.success) {
+        setContent(data.content)
+      } else {
+        toast.error(data.message)
+      }
+
+    } catch (error) {
+      toast.error(error.message)
+
+    }
+    setLoading(false)
    }
  
    return (
@@ -23,8 +56,12 @@ const ReviewResume = () => {
         
          <p className='text-xs text-gray-500 font-light mt-1'>Supports PDF Resume Only.</p>
  
-         <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#f26bc1] to-[#fc03a1] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>
-           <FileText className='w-5'/>
+         <button disabled={loading} className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#f26bc1] to-[#fc03a1] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>
+           {
+            loading? <span className='w-4 h-4 my-1 rounded-full border-2 border-t-transparent animate-spin'></span>:           <FileText className='w-5'/>
+
+    }
+
            Review Resume
          </button>
  
@@ -38,13 +75,25 @@ const ReviewResume = () => {
            <h1 className='text-xl font-semibold'>Analysis Results</h1>
  
          </div>
-         <div className='flex-1 flex justify-center items-center'>
+         {
+          !content ? (
+             <div className='flex-1 flex justify-center items-center'>
            <div className='text-sm flex flex-col items-center gap-5 text-gray-400'>
              <FileText className='w-9 h-9'/>
              <p className='justify-center item-center flex'>Upload a Resume and Click "Review Resume" to get Started </p>
            </div>
  
          </div>
+          ): (
+            <div className='mt-3 h-full overflow-y-scroll texr-sm text-slate-600' >
+              <div className='reset-tw'>
+                <Markdown>{content}</Markdown>
+              </div>
+
+            </div>
+          )
+         }
+        
         
        </div>
  
