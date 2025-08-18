@@ -17,7 +17,7 @@ const Hero = () => {
       "
     >
       {/* Heading + Subheading */}
-      <div className="text-center mb-6">
+      <div className="text-center mb-6 mt-12">
         <h1
           className="
             text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl
@@ -90,6 +90,39 @@ const Hero = () => {
         <img src={assets.user_group} alt="" className="h-8 animate-float" />
         Trusted by over <span className="font-semibold text-gray-800">100,000+</span> users
       </div>
+
+{/* 🔥 Social Logos Marquee with Fade & Load Animation */}
+<div className="mt-12 relative overflow-hidden opacity-0 translate-y-6 animate-fadeUp">
+  {/* Left & Right Fade */}
+  <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
+  <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10" />
+
+  <div
+    className="marquee-inner flex will-change-transform min-w-[200%] animate-marquee"
+    style={{ animationDuration: "30s" }}
+  >
+    <div className="flex items-center">
+      <img alt="slack" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/slack.svg" />
+      <img alt="framer" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/framer.svg" />
+      <img alt="netflix" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/netflix.svg" />
+      <img alt="google" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/google.svg" />
+      <img alt="linkedin" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/linkedin.svg" />
+      <img alt="instagram" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/instagram.svg" />
+      <img alt="facebook" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/facebook.svg" />
+
+      {/* Duplicate set for infinite loop */}
+      <img alt="slack" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/slack.svg" />
+      <img alt="framer" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/framer.svg" />
+      <img alt="netflix" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/netflix.svg" />
+      <img alt="google" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/google.svg" />
+      <img alt="linkedin" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/linkedin.svg" />
+      <img alt="instagram" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/instagram.svg" />
+      <img alt="facebook" className="h-10 mx-6 transition-transform duration-500 hover:scale-110" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/facebook.svg" />
+    </div>
+  </div>
+</div>
+
+
     </div>
   )
 }

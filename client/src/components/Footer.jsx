@@ -8,7 +8,7 @@ export default function Footer() {
   useScrollAnimation(ref)
 
   return (
-    <footer ref={ref} className="px-6 md:px-16 lg:px-24 xl:px-32 pt-12 w-full text-gray-500 mt-20 opacity-0 translate-y-5">
+    <footer ref={ref} className="px-6 md:px-16 lg:px-24 xl:px-32 pt-12 w-full text-gray-500 mt-20 opacity-0 translate-y-5 bg-gradient-to-br from-[#f2f7f7] to-[#e1fafa]">
       <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-gray-200 pb-8">
         <div className="md:max-w-96">
           <img className="h-9" src={assets.logo} alt="Logo" />
