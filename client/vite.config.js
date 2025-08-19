@@ -9,10 +9,5 @@ export default defineConfig({
     transformer: "postcss",
     postcss: {},  // ✅ Force PostCSS instead of LightningCSS
   },
-   optimizeDeps: {
-    exclude: ['lightningcss'], // 🚫 Don't bundle lightningcss
-  },
-  ssr: {
-    noExternal: ['lightningcss'], // 🚫 Ignore lightningcss in SSR too
-  },
+
 })
