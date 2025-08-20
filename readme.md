@@ -144,4 +144,4 @@ Vercel
 
 GitHub: [KunalxKushwaha](https://github.com/KunalxKushwaha)
 
-LinkedIn:[Kunal Kushwaha](www.linkedin.com/in/kunal-kushwaha-a25810294)
+LinkedIn:[Kunal Kushwaha](https://linkedin.com/in/kunal-kushwaha-a25810294)
