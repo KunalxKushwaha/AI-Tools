@@ -13,7 +13,7 @@ The platform is built with **React + Vite (frontend)**, **Node.js/Express (backe
 ✅ **Background Remover** – Remove image backgrounds instantly.  
 ✅ **Object Remover** – Erase unwanted objects from images.  
 ✅ **Resume Reviewer** – AI-powered resume suggestions & improvements.  
-✅ **Community Page** – Showcase and explore AI-generated images.Where you can like or dislike any image.
+✅ **Community Page** – Showcase and explore AI-generated images.Where you can Like or dDslike any image.
 
 ---
 
