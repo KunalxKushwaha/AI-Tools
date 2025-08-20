@@ -142,6 +142,6 @@ Vercel
 
 👤 Made with 💖 by Kunal Kushwaha
 
-GitHub: @KunalxKushwaha
+GitHub: [KunalxKushwaha](https://github.com/KunalxKushwaha)
 
-LinkedIn: your-linkedin
+LinkedIn:[Kunal Kushwaha](www.linkedin.com/in/kunal-kushwaha-a25810294)
