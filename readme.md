@@ -44,8 +44,6 @@ The platform is built with **React + Vite (frontend)**, **Node.js/Express (backe
 - AI Tools Dashboard  
 - AI Image Generator  
 - Resume Reviewer  
-- Community Page  
-
 ---
 
 ## ⚙️ Installation & Setup  
